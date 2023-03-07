@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1 style="text-align: center; padding: 2%;">Roosevelt Island Train Schedule</h1>
+        <table>
+            <!--Next Train-->
+            <tr>
+                <td rowspan="2" class="logo btmBorder"><img src="static\FLogo.jpg" alt="F Train Logo" width="50px" height="auto"></td>
+                <td class="center direction">Manhattan Bound</td> 
+                <td rowspan="2" class="btmBorder"><H3>{{ nextTrain }} {{ minute }}</H3></td>
+            </tr>
+            <tr>
+                <td class="btmBorder line direction">Coney Island-Stillwell Av</td>
+            </tr>
+            <!--Second Train-->
+            <tr>
+                <td rowspan="2" class="logo btmBorder"><img src="static\FLogo.jpg" alt="F Train Logo" width="50px" height="auto"></td>
+                <td class="center direction">Manhattan Bound</td> 
+                <td rowspan="2" class="btmBorder"><H3>{{ secondTrain }} minutes</H3></td>
+            </tr>
+            <tr>
+                <td class="btmBorder line direction">Coney Island-Stillwell Av</td>
+            </tr>
+            <!--Third Train-->
+            <tr>
+                <td rowspan="2" class="logo btmBorder"><img src="static\FLogo.jpg" alt="F Train Logo" width="50px" height="auto"></td>
+                <td class="center direction">Manhattan Bound</td> 
+                <td rowspan="2" class="btmBorder"><H3>{{ thirdTrain }} minutes</H3></td>
+            </tr>
+            <tr>
+                <td class="btmBorder line direction">Coney Island-Stillwell Av</td>
+            </tr>
+        </table>
+    </body>
+</html>
